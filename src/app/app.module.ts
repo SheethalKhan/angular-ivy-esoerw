@@ -12,6 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 const route: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -27,6 +29,7 @@ const route: Routes = [
     MatToolbarModule,
     MatIconModule,
     NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   declarations: [AppComponent, LoginComponent],
   bootstrap: [AppComponent],
