@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 const route: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -18,11 +19,13 @@ const route: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(route),
-    AngularMaterialModule,
+
     HttpClientModule,
     CommonModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
