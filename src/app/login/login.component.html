@@ -3,7 +3,8 @@
   <mat-icon>shopping_cart</mat-icon>
 </mat-toolbar>
 
-<ul
+<!-- 
+  
   *ngFor="let item of arrayList | paginate: { itemsPerPage: 5, currentPage: p }"
 >
   <li>
@@ -19,7 +20,22 @@
       >
     </div>
   </li>
-</ul>
+</ul> -->
+<table class="table table-hover"
+  *ngFor="let item of arrayList | paginate: { itemsPerPage: 5, currentPage: p }"
+>
+  <tr>
+    <th>{{ item.id }}</th>
+    <th>{{ item.title }}</th>
+  </tr>
+  
+  <tr>
+    <th><button class="btn btn-warning btn-sm">Add to Cart</button></th>
+    <th><button class="btn btn-success btn-sm">Buy Now</button></th>
+ 
+  </tr>
+  
+</table>
 <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
 <mat-toolbar
   style="background-color:black;color:white; position:absolute;
