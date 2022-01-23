@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { NgxPaginationModule } from 'ngx-pagination';
 const route: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -19,11 +21,12 @@ const route: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(route),
-
+    MatButtonModule,
     HttpClientModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,
+    NgxPaginationModule,
   ],
   declarations: [AppComponent, LoginComponent],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   arrayList = [];
+  p: number = 1;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -18,6 +19,10 @@ export class LoginComponent implements OnInit {
         // this.arrayList.forEach((element) => {
         //   console.log('res', element.id);
         // });
+        // console.log('res', res);
       });
+  }
+  pageChanged(e) {
+    this.p = e;
   }
 }
