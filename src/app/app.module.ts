@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { HttpClientModule } from '@angular/common/http';
 const route: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -17,6 +18,7 @@ const route: Routes = [
     FormsModule,
     RouterModule.forRoot(route),
     AngularMaterialModule,
+    HttpClientModule
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
