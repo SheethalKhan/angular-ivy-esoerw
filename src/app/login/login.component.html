@@ -5,7 +5,8 @@
 <br />
 <div class="input-group container">
   <input
-    type="search" [(ngModel)]="msg" 
+    type="search"
+    [(ngModel)]="msg"
     class="form-control"
     placeholder="Search"
     aria-label="Search"
@@ -14,7 +15,11 @@
 </div>
 <br />
 <ul
-  *ngFor="let item of arrayList | paginate: { itemsPerPage: 5, currentPage: p , totalItems: total} | filter: msg"
+  *ngFor="
+    let item of arrayList
+      | paginate: { itemsPerPage: 5, currentPage: p }
+      | filter: msg
+  "
 >
   <li>
     <div>

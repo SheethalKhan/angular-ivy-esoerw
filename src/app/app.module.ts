@@ -13,6 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+//import { ToastrService } from 'ngx-toastr/toastr';
+import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const route: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,7 +32,9 @@ const route: Routes = [
     MatToolbarModule,
     MatIconModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    ToastrModule,
+    BrowserAnimationsModule
   ],
   declarations: [AppComponent, LoginComponent],
   bootstrap: [AppComponent],
